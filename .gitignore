@@ -1,5 +1,5 @@
 objs/
 dist/README-SDL.txt
 dist/SDL.dll
-dist/dash_pong
-dist/dash_pong.exe
+dist/fire_pong
+dist/fire_pong.exe
