@@ -47,12 +47,10 @@ int main(int argc, char **argv) {
 
 	//create window:
 	SDL_Window *window = SDL_CreateWindow(
-		"gp19 pong", //TODO: remember to set a title for your game!
+		"dash pong",
 		SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-		640, 480, //TODO: modify window size if you'd like
-		SDL_WINDOW_OPENGL
-		| SDL_WINDOW_RESIZABLE //uncomment to allow resizing
-		| SDL_WINDOW_ALLOW_HIGHDPI //uncomment for full resolution on high-DPI screens
+		640, 480,
+		SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI
 	);
 
 	//prevent exceedingly tiny windows when resizing:
@@ -124,7 +122,7 @@ int main(int argc, char **argv) {
 				} else if (evt.type == SDL_QUIT) {
 					Mode::set_current(nullptr);
 					break;
-				} else if (evt.type == SDL_KEYDOWN && evt.key.keysym.sym == SDLK_PRINTSCREEN) {
+				} else if (evt.type == SDL_KEYDOWN && evt.key.keysym.sym == SDLK_s) {
 					// --- screenshot key ---
 					std::string filename = "screenshot.png";
 					std::cout << "Saving screenshot to '" << filename << "'." << std::endl;

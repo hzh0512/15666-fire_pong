@@ -71,4 +71,7 @@ struct PongMode : Mode {
 	// computed in draw() as the inverse of OBJECT_TO_CLIP
 	// (stored here so that the mouse handling code can use it to position the paddle)
 
+	// enable attack mode when left clicking while hitting the ball
+	bool attack = false;
+	int attacker = 0;
 };
